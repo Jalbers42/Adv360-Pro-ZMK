@@ -32,8 +32,7 @@
     };
 
     macros {
-
-        macro_cmd_up: macro_cmd_up{
+        macro_cmd_up: macro_cmd_up {
             compatible = "zmk,behavior-macro";
             label = "macro_cmd_up";
             #binding-cells = <0>;
@@ -46,7 +45,7 @@
                 <&kp LCMD>;
         };
 
-        macro_cmd_down: macro_cmd_down{
+        macro_cmd_down: macro_cmd_down {
             compatible = "zmk,behavior-macro";
             label = "macro_cmd_down";
             #binding-cells = <0>;
@@ -59,7 +58,7 @@
                 <&kp LCMD>;
         };
 
-        macro_cmd_left: macro_cmd_left{
+        macro_cmd_left: macro_cmd_left {
             compatible = "zmk,behavior-macro";
             label = "macro_cmd_left";
             #binding-cells = <0>;
@@ -72,7 +71,7 @@
                 <&kp LCMD>;
         };
 
-        macro_cmd_right: macro_cmd_right{
+        macro_cmd_right: macro_cmd_right {
             compatible = "zmk,behavior-macro";
             label = "macro_cmd_right";
             #binding-cells = <0>;
@@ -620,11 +619,11 @@
 
         layer_fn {
             bindings = <
-&kp F1  &kp F2  &kp F3              &kp F4          &kp F5              &kp F6             &trans                                       &trans          &kp C_VOLUME_DOWN   &kp C_VOLUME_UP      &kp C_PREV          &kp C_PLAY_PAUSE  &kp C_NEXT            &kp F12
-&trans  &trans  &trans              &macro_emoji    &macro_cmd_shift_r  &macro_ctrl_alt_t  &none                                        &none           &trans              &kp LEFT_BRACE       &macro_ctrl_down    &macro_ctrl_up    &kp RIGHT_BRACE       &macro_cmd_shift_backslash
-&trans  &trans  &macro_screenshot   &macro_alt_tab  &macro_shift_v      &trans             &kp TAB  &trans  &trans      &trans  &trans  &kp TAB         &kp NUMBER_9        &kp LEFT             &kp DOWN            &kp UP            &kp RIGHT             &kp NUMBER_0
-&trans  &trans  &macro_cmd_shift_x  &macro_copy     &macro_paste        &trans                              &trans      &trans                          &macro_shift_enter  &macro_control_left  &macro_option_down  &macro_option_up  &macro_control_right  &trans
-&trans  &trans  &trans              &trans          &trans                                 &trans   &trans  &trans      &trans  &mo 4   &kp UNDERSCORE                      &trans               &trans              &trans            &trans                &trans
+&kp F1  &kp F2  &kp F3              &kp F4        &kp F5              &kp F6             &trans                                       &trans          &kp C_VOLUME_DOWN   &kp C_VOLUME_UP      &kp C_PREV          &kp C_PLAY_PAUSE  &kp C_NEXT            &kp F12
+&trans  &trans  &trans              &macro_emoji  &macro_cmd_shift_r  &macro_ctrl_alt_t  &none                                        &none           &trans              &kp LEFT_BRACE       &macro_ctrl_down    &macro_ctrl_up    &kp RIGHT_BRACE       &macro_cmd_shift_backslash
+&trans  &trans  &macro_screenshot   &trans        &macro_shift_v      &trans             &kp TAB  &trans  &trans      &trans  &trans  &kp TAB         &kp NUMBER_9        &kp LEFT             &kp DOWN            &kp UP            &kp RIGHT             &kp NUMBER_0
+&trans  &trans  &macro_cmd_shift_x  &macro_copy   &macro_paste        &trans                              &trans      &trans                          &macro_shift_enter  &macro_control_left  &macro_option_down  &macro_option_up  &macro_control_right  &trans
+&trans  &trans  &trans              &trans        &trans                                 &trans   &trans  &trans      &trans  &mo 4   &kp UNDERSCORE                      &trans               &trans              &trans            &trans                &trans
             >;
         };
 
@@ -641,8 +640,8 @@
         layer_fn_cmd {
             bindings = <
 &trans  &trans              &trans                    &trans             &trans               &trans  &trans                                      &trans  &trans                    &trans               &trans  &trans  &trans                   &trans
-&trans  &trans              &macro_window_almost_max  &macro_window_max  &trans               &trans  &trans                                      &trans  &trans                    &trans               &trans  &trans  &macro_cmd_shift_p       &trans
-&trans  &macro_window_left  &macro_window_down        &macro_window_up   &macro_window_right  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &macro_option_shift_left  &macro_option_left   &trans  &trans  &macro_option_right      &macro_option_shift_right
+&trans  &macro_window_left  &macro_window_almost_max  &macro_window_max  &macro_window_right  &trans  &trans                                      &trans  &trans                    &trans               &trans  &trans  &macro_cmd_shift_p       &trans
+&trans  &macro_cmd_left     &macro_cmd_down           &macro_cmd_up      &macro_cmd_right     &trans  &trans  &trans  &trans      &trans  &trans  &trans  &macro_option_shift_left  &macro_option_left   &trans  &trans  &macro_option_right      &macro_option_shift_right
 &trans  &trans              &trans                    &trans             &trans               &trans                  &trans      &trans                  &trans                    &macro_option_slash  &trans  &trans  &macro_option_backslash  &trans
 &trans  &trans              &trans                    &trans             &trans                       &trans  &trans  &trans      &trans  &trans  &trans                            &trans               &trans  &trans  &trans                   &trans
             >;
