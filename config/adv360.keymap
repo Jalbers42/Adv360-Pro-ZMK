@@ -32,209 +32,513 @@
     };
 
     macros {
-        shift_a: new_macro {
+        macro_cmd_shift_x: macro_cmd_shift_x {
             compatible = "zmk,behavior-macro";
+            label = "macro_cmd_shift_x";
             #binding-cells = <0>;
-            bindings = <&kp A &kp LEFT_SHIFT>;
-            label = "NEW_MACRO";
+            bindings =
+                <&macro_press>,
+                <&kp LCMD>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp X>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>,
+                <&macro_release>,
+                <&kp LCMD>;
         };
-        macro_cmd_shift_x: macro_cmd_shift_x{
-        compatible = "zmk,behavior-macro";
-        label = "macro_cmd_shift_x";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCMD>, <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp X>, <&macro_release &kp LEFT_SHIFT>, <&macro_release &kp LCMD>;
+
+        macro_ctrl_alt_t: macro_ctrl_alt_t {
+            compatible = "zmk,behavior-macro";
+            label = "macro_ctrl_alt_t";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp T>,
+                <&macro_release>,
+                <&kp LEFT_ALT>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_ctrl_alt_t: macro_ctrl_alt_t{
-        compatible = "zmk,behavior-macro";
-        label = "macro_ctrl_alt_t";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LEFT_ALT>, <&macro_tap &kp T>, <&macro_release &kp LEFT_ALT>, <&macro_release &kp LCTRL>;
+
+        macro_emoji: macro_emoji {
+            compatible = "zmk,behavior-macro";
+            label = "macro_emoji";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LCMD>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LCMD>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_emoji: macro_emoji{
-        compatible = "zmk,behavior-macro";
-        label = "macro_emoji";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LCMD>, <&macro_tap &kp SPACE>, <&macro_release &kp LCMD>, <&macro_release &kp LCTRL>;
+
+        macro_window_almost_max: macro_window_almost_max {
+            compatible = "zmk,behavior-macro";
+            label = "macro_window_almost_max";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LCMD>,
+                <&macro_tap>,
+                <&kp BACKSPACE>,
+                <&macro_release>,
+                <&kp LCMD>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_window_almost_max: macro_window_almost_max{
-        compatible = "zmk,behavior-macro";
-        label = "macro_window_almost_max";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LCMD>, <&macro_tap &kp BACKSPACE>, <&macro_release &kp LCMD>, <&macro_release &kp LCTRL>;
+
+        macro_window_max: macro_window_max {
+            compatible = "zmk,behavior-macro";
+            label = "macro_window_max";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LCMD>,
+                <&macro_tap>,
+                <&kp ENTER>,
+                <&macro_release>,
+                <&kp LCMD>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_window_max: macro_window_max{
-        compatible = "zmk,behavior-macro";
-        label = "macro_window_max";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LCMD>, <&macro_tap &kp ENTER>, <&macro_release &kp LCMD>, <&macro_release &kp LCTRL>;
+
+        macro_window_central: macro_window_central {
+            compatible = "zmk,behavior-macro";
+            label = "macro_window_central";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LCMD>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LCMD>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_window_central: macro_window_central{
-        compatible = "zmk,behavior-macro";
-        label = "macro_window_central";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LCMD>, <&macro_tap &kp C>, <&macro_release &kp LCMD>, <&macro_release &kp LCTRL>;
+
+        macro_window_down: macro_window_down {
+            compatible = "zmk,behavior-macro";
+            label = "macro_window_down";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LCMD>,
+                <&macro_tap>,
+                <&kp DOWN>,
+                <&macro_release>,
+                <&kp LCMD>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_window_down: macro_window_down{
-        compatible = "zmk,behavior-macro";
-        label = "macro_window_down";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LCMD>, <&macro_tap &kp DOWN>, <&macro_release &kp LCMD>, <&macro_release &kp LCTRL>;
+
+        macro_window_up: macro_window_up {
+            compatible = "zmk,behavior-macro";
+            label = "macro_window_up";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LCMD>,
+                <&macro_tap>,
+                <&kp UP>,
+                <&macro_release>,
+                <&kp LCMD>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_window_up: macro_window_up{
-        compatible = "zmk,behavior-macro";
-        label = "macro_window_up";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LCMD>, <&macro_tap &kp UP>, <&macro_release &kp LCMD>, <&macro_release &kp LCTRL>;
+
+        macro_window_right: macro_window_right {
+            compatible = "zmk,behavior-macro";
+            label = "macro_window_right";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LCMD>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LCMD>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_window_right: macro_window_right{
-        compatible = "zmk,behavior-macro";
-        label = "macro_window_right";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LCMD>, <&macro_tap &kp RIGHT>, <&macro_release &kp LCMD>, <&macro_release &kp LCTRL>;
+
+        macro_window_left: macro_window_left {
+            compatible = "zmk,behavior-macro";
+            label = "macro_window_left";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LCMD>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LCMD>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_window_left: macro_window_left{
-        compatible = "zmk,behavior-macro";
-        label = "macro_window_left";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LCMD>, <&macro_tap &kp LEFT>, <&macro_release &kp LCMD>, <&macro_release &kp LCTRL>;
+
+        macro_option_right: macro_option_right {
+            compatible = "zmk,behavior-macro";
+            label = "macro_option_right";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
         };
-        macro_option_right: macro_option_right{
-        compatible = "zmk,behavior-macro";
-        label = "macro_option_right";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LEFT_ALT>, <&macro_tap &kp RIGHT>, <&macro_release &kp LEFT_ALT>;
+
+        macro_option_left: macro_option_left {
+            compatible = "zmk,behavior-macro";
+            label = "macro_option_left";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
         };
-        macro_option_left: macro_option_left{
-        compatible = "zmk,behavior-macro";
-        label = "macro_option_left";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LEFT_ALT>, <&macro_tap &kp LEFT>, <&macro_release &kp LEFT_ALT>;
+
+        macro_option_shift_right: macro_option_shift_right {
+            compatible = "zmk,behavior-macro";
+            label = "macro_option_shift_right";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
         };
-        macro_option_shift_right: macro_option_shift_right{
-        compatible = "zmk,behavior-macro";
-        label = "macro_option_shift_right";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LEFT_ALT>, <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp RIGHT>, <&macro_release &kp LEFT_SHIFT>, <&macro_release &kp LEFT_ALT>;
+
+        macro_option_shift_left: macro_option_shift_left {
+            compatible = "zmk,behavior-macro";
+            label = "macro_option_shift_left";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
         };
-        macro_option_shift_left: macro_option_shift_left{
-        compatible = "zmk,behavior-macro";
-        label = "macro_option_shift_left";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LEFT_ALT>, <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp LEFT>, <&macro_release &kp LEFT_SHIFT>, <&macro_release &kp LEFT_ALT>;
+
+        macro_cmd_shift_p: macro_cmd_shift_p {
+            compatible = "zmk,behavior-macro";
+            label = "macro_cmd_shift_p";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RCMD>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp P>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>,
+                <&macro_release>,
+                <&kp RCMD>;
         };
-        macro_cmd_shift_p: macro_cmd_shift_p{
-        compatible = "zmk,behavior-macro";
-        label = "macro_cmd_shift_p";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp RCMD>, <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp P>, <&macro_release &kp LEFT_SHIFT>, <&macro_release &kp RCMD>;
+
+        macro_copy: macro_copy {
+            compatible = "zmk,behavior-macro";
+            label = "macro_copy";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCMD>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LCMD>;
         };
-        macro_copy: macro_copy{
-        compatible = "zmk,behavior-macro";
-        label = "macro_copy";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCMD>, <&macro_tap &kp C>, <&macro_release &kp LCMD>;
+
+        macro_paste: macro_paste {
+            compatible = "zmk,behavior-macro";
+            label = "macro_paste";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCMD>,
+                <&macro_tap>,
+                <&kp V>,
+                <&macro_release>,
+                <&kp LCMD>;
         };
-        macro_paste: macro_paste{
-        compatible = "zmk,behavior-macro";
-        label = "macro_paste";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCMD>, <&macro_tap &kp V>, <&macro_release &kp LCMD>;
+
+        macro_cmd_shift_r: macro_cmd_shift_r {
+            compatible = "zmk,behavior-macro";
+            label = "macro_cmd_shift_r";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCMD>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp R>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>,
+                <&macro_release>,
+                <&kp LCMD>;
         };
-        macro_cmd_shift_r: macro_cmd_shift_r{
-        compatible = "zmk,behavior-macro";
-        label = "macro_cmd_shift_r";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCMD>, <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp R>, <&macro_release &kp LEFT_SHIFT>, <&macro_release &kp LCMD>;
+
+        macro_cmd_shift_backslash: macro_cmd_shift_backslash {
+            compatible = "zmk,behavior-macro";
+            label = "macro_cmd_shift_backslash";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCMD>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp BACKSLASH>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>,
+                <&macro_release>,
+                <&kp LCMD>;
         };
-        macro_cmd_shift_backslash: macro_cmd_shift_backslash{
-        compatible = "zmk,behavior-macro";
-        label = "macro_cmd_shift_backslash";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCMD>, <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp BACKSLASH>, <&macro_release &kp LEFT_SHIFT>, <&macro_release &kp LCMD>;
+
+        macro_shift_v: macro_shift_v {
+            compatible = "zmk,behavior-macro";
+            label = "macro_shift_v";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp V>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
         };
-        macro_shift_v: macro_shift_v{
-        compatible = "zmk,behavior-macro";
-        label = "macro_shift_v";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp V>, <&macro_release &kp LEFT_SHIFT>;
+
+        macro_screenshot: macro_screenshot {
+            compatible = "zmk,behavior-macro";
+            label = "macro_screenshot";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_press>,
+                <&kp LCMD>,
+                <&macro_tap>,
+                <&kp NUMBER_4>,
+                <&macro_release>,
+                <&kp LCMD>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_screenshot: macro_screenshot{
-        compatible = "zmk,behavior-macro";
-        label = "macro_screenshot";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LEFT_SHIFT>, <&macro_press &kp LCMD>, <&macro_tap &kp NUMBER_4>, <&macro_release &kp LCMD>, <&macro_release &kp LEFT_SHIFT>, <&macro_release &kp LCTRL>;
+
+        macro_shift_enter: macro_shift_enter {
+            compatible = "zmk,behavior-macro";
+            label = "macro_shift_enter";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp ENTER>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
         };
-        macro_shift_enter: macro_shift_enter{
-        compatible = "zmk,behavior-macro";
-        label = "macro_shift_enter";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LEFT_SHIFT>, <&macro_tap &kp ENTER>, <&macro_release &kp LEFT_SHIFT>;
+
+        macro_option_slash: macro_option_slash {
+            compatible = "zmk,behavior-macro";
+            label = "macro_option_slash";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp SLASH>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
         };
-        macro_option_slash: macro_option_slash{
-        compatible = "zmk,behavior-macro";
-        label = "macro_option_slash";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LEFT_ALT>, <&macro_tap &kp SLASH>, <&macro_release &kp LEFT_ALT>;
+
+        macro_option_backslash: macro_option_backslash {
+            compatible = "zmk,behavior-macro";
+            label = "macro_option_backslash";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp BACKSLASH>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
         };
-        macro_option_backslash: macro_option_backslash{
-        compatible = "zmk,behavior-macro";
-        label = "macro_option_backslash";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LEFT_ALT>, <&macro_tap &kp BACKSLASH>, <&macro_release &kp LEFT_ALT>;
+
+        macro_control_right: macro_control_right {
+            compatible = "zmk,behavior-macro";
+            label = "macro_control_right";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_control_right: macro_control_right{
-        compatible = "zmk,behavior-macro";
-        label = "macro_control_right";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp RIGHT>, <&macro_release &kp LCTRL>;
+
+        macro_control_left: macro_control_left {
+            compatible = "zmk,behavior-macro";
+            label = "macro_control_left";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_control_left: macro_control_left{
-        compatible = "zmk,behavior-macro";
-        label = "macro_control_left";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp LEFT>, <&macro_release &kp LCTRL>;
+
+        macro_option_up: macro_option_up {
+            compatible = "zmk,behavior-macro";
+            label = "macro_option_up";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp UP>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
         };
-        macro_option_up: macro_option_up{
-        compatible = "zmk,behavior-macro";
-        label = "macro_option_up";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LEFT_ALT>, <&macro_tap &kp UP>, <&macro_release &kp LEFT_ALT>;
+
+        macro_option_down: macro_option_down {
+            compatible = "zmk,behavior-macro";
+            label = "macro_option_down";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp DOWN>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
         };
-        macro_option_down: macro_option_down{
-        compatible = "zmk,behavior-macro";
-        label = "macro_option_down";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LEFT_ALT>, <&macro_tap &kp DOWN>, <&macro_release &kp LEFT_ALT>;
+
+        macro_ctrl_up: macro_ctrl_up {
+            compatible = "zmk,behavior-macro";
+            label = "macro_ctrl_up";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_ctrl_up: macro_ctrl_up{
-        compatible = "zmk,behavior-macro";
-        label = "macro_ctrl_up";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp U>, <&macro_release &kp LCTRL>;
+
+        macro_ctrl_down: macro_ctrl_down {
+            compatible = "zmk,behavior-macro";
+            label = "macro_ctrl_down";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp D>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_ctrl_down: macro_ctrl_down{
-        compatible = "zmk,behavior-macro";
-        label = "macro_ctrl_down";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp D>, <&macro_release &kp LCTRL>;
+
+        macro_workspace_right: macro_workspace_right {
+            compatible = "zmk,behavior-macro";
+            label = "macro_workspace_right";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LEFT_ALT>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_workspace_right: macro_workspace_right{
-        compatible = "zmk,behavior-macro";
-        label = "macro_workspace_right";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LEFT_ALT>, <&macro_tap &kp RIGHT>, <&macro_release &kp LEFT_ALT>, <&macro_release &kp LCTRL>;
+
+        macro_workspace_left: macro_workspace_left {
+            compatible = "zmk,behavior-macro";
+            label = "macro_workspace_left";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LEFT_ALT>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        macro_workspace_left: macro_workspace_left{
-        compatible = "zmk,behavior-macro";
-        label = "macro_workspace_left";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LEFT_ALT>, <&macro_tap &kp LEFT>, <&macro_release &kp LEFT_ALT>, <&macro_release &kp LCTRL>;
-        };
-        macro_mission_ctrl: macro_mission_ctrl{
-        compatible = "zmk,behavior-macro";
-        label = "macro_mission_ctrl";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LEFT_ALT>, <&macro_tap &kp UP>, <&macro_release &kp LEFT_ALT>, <&macro_release &kp LCTRL>;
+
+        macro_mission_ctrl: macro_mission_ctrl {
+            compatible = "zmk,behavior-macro";
+            label = "macro_mission_ctrl";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp UP>,
+                <&macro_release>,
+                <&kp LEFT_ALT>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
     };
 
@@ -243,11 +547,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3                 &kp N4                  &kp N5  &mo 3                                                                       &mo 3      &kp N6  &kp N7               &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E                  &kp R                   &kp T   &none                                                                       &none      &kp Y   &kp U                &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D                  &kp F                   &kp G   &kp TAB        &kp LCTRL  &kp LCMD        &kp RIGHT_ALT      &kp RIGHT_ALT  &kp TAB    &kp H   &kp J                &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C                  &kp V                   &kp B                             &none           &none                                        &kp N   &kp M                &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&none      &kp GRAVE  &kp CAPS  &macro_workspace_left  &macro_workspace_right          &kp BACKSPACE  &mo 2      &kp RETURN      &kp RIGHT_CONTROL  &kp RCMD       &kp SPACE          &macro_mission_ctrl  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
+&kp EQUAL  &kp N1     &kp N2    &kp N3                 &kp N4                  &kp N5  &mo 3                                                                         &mo 3      &kp N6  &kp N7               &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E                  &kp R                   &kp T   &none                                                                         &none      &kp Y   &kp U                &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S     &kp D                  &kp F                   &kp G   &kp TAB        &kp LCTRL  &kp LEFT_ALT      &kp RIGHT_ALT      &kp RIGHT_ALT  &kp TAB    &kp H   &kp J                &kp K      &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C                  &kp V                   &kp B                             &kp LCMD          &none                                        &kp N   &kp M                &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&none      &kp GRAVE  &kp CAPS  &macro_workspace_left  &macro_workspace_right          &kp BACKSPACE  &mo 2      &kp RETURN        &kp RIGHT_CONTROL  &kp RCMD       &kp SPACE          &macro_mission_ctrl  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
@@ -264,7 +568,7 @@
         layer_fn {
             bindings = <
 &kp F1  &kp F2  &kp F3              &kp F4        &kp F5              &kp F6             &trans                                       &trans          &kp C_VOLUME_DOWN   &kp C_VOLUME_UP      &kp C_PREV          &kp C_PLAY_PAUSE  &kp C_NEXT            &kp F12
-&trans  &trans  &shift_a            &macro_emoji  &macro_cmd_shift_r  &macro_ctrl_alt_t  &none                                        &none           &trans              &kp LEFT_BRACE       &macro_ctrl_down    &macro_ctrl_up    &kp RIGHT_BRACE       &macro_cmd_shift_backslash
+&trans  &trans  &trans              &macro_emoji  &macro_cmd_shift_r  &macro_ctrl_alt_t  &none                                        &none           &trans              &kp LEFT_BRACE       &macro_ctrl_down    &macro_ctrl_up    &kp RIGHT_BRACE       &macro_cmd_shift_backslash
 &trans  &trans  &macro_screenshot   &trans        &macro_shift_v      &trans             &kp TAB  &trans  &trans      &trans  &trans  &kp TAB         &kp NUMBER_9        &kp LEFT             &kp DOWN            &kp UP            &kp RIGHT             &kp NUMBER_0
 &trans  &trans  &macro_cmd_shift_x  &macro_copy   &macro_paste        &trans                              &trans      &trans                          &macro_shift_enter  &macro_control_left  &macro_option_down  &macro_option_up  &macro_control_right  &trans
 &trans  &trans  &trans              &trans        &trans                                 &trans   &trans  &trans      &trans  &mo 4   &kp UNDERSCORE                      &trans               &trans              &trans            &trans                &trans
