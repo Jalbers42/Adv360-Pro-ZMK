@@ -32,6 +32,20 @@
     };
 
     macros {
+
+        macro_alt_tab: macro_alt_tab{
+            compatible = "zmk,behavior-macro";
+            label = "macro_alt_tab - copilot complete";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LEFT_ALT>,
+        };
+
         macro_cmd_shift_x: macro_cmd_shift_x {
             compatible = "zmk,behavior-macro";
             label = "macro_cmd_shift_x";
