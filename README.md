@@ -11,7 +11,7 @@
 - Start bootloader mode, by double pressing hidden bootloader button with pin
 - Pull file onto left keyboard in finder
 - Wait until disconnect, then disconnect cable, turn on left keyboard bluetooth
-- plugin right keyboard and repeat
+- Plugin right keyboard and repeat
 
 ## Modifying the keymap
 
