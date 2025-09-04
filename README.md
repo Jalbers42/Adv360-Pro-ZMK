@@ -2,9 +2,11 @@
 
 # PERSONAL
 
+- Git pull
 - Add macro in repo. add commit push...
 - See if action fails
-- Update key mapping on keymap editor
+- Update key mapping on keymap editor and press save, this triggers action
+- Git pull to keep repo up to date
 - Download no clique file from successful action
 - Turn off both keyboards
 - Connect left with cable
