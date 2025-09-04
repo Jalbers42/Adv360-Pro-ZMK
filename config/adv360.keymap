@@ -57,11 +57,11 @@
                 <&macro_tap>,
                 <&kp ESC>,
                 <&macro_release>,
-                <&kp LEFT_ALT>;
+                <&kp LEFT_ALT>,
                 <&macro_release>,
                 <&kp LCMD>;
         };
-        
+
         macro_cmd_up: macro_cmd_up {
             compatible = "zmk,behavior-macro";
             label = "macro_cmd_up";
